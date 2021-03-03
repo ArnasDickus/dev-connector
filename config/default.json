@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://arnas123:wDQQnR4CPIztArWueX6p@devconnector.vgyi9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://arnas123:wDQQnR4CPIztArWueX6p@devconnector.vgyi9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }
