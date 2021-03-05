@@ -116,10 +116,26 @@ router.post('/',
 
             return res.json(profile);
         }
+        profile = new Profile(profileFields);
+        await profile.save();
+        res.json(profile);
     } catch(err) {
         console.error(err.message);
         res.status(500).send('Server Error');
     }
 })
+
+// @route   Get api/profile
+// @desc    Get all profiles
+// @access  Public
+router.get('/', async (req, res) => {
+    try {
+        const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+        res.json(profiles);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+});
 
 module.exports = router;
