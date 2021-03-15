@@ -17,12 +17,12 @@ const Register = () => {
         });
     }
 
-    const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if(password !== password2) {
             console.log('Passwords do not match');
         } else {
-            console.log(formData);
+            console.log('success');
         }
     }
     return (
