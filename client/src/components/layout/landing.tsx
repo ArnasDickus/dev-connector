@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { AllRoutes } from '../../enum/allroutes.enum';
 
 const Landing: React.FC<{}> = () => {
     return (
@@ -11,8 +13,8 @@ const Landing: React.FC<{}> = () => {
             other developers
           </p>
           <div className="buttons">
-            <a href="register.html" className="btn btn-primary">Sign Up</a>
-            <a href="login.html" className="btn btn-light">Login</a>
+            <Link to={AllRoutes.REGISTER} className="btn btn-primary">Sign Up</Link>
+            <Link to={AllRoutes.LOGIN} className="btn btn-light">Login</Link>
           </div>
         </div>
       </div>
